@@ -20,7 +20,7 @@ class Enemy {
         return false;
     }
 }
-function createEnemyElement(enemy) {
+function createEnemyElement(enemy, randomEnemyType) {
     const enemyView = document.createElement('div');
     enemyView.classList.add('enemy_view');
 
@@ -37,6 +37,7 @@ function createEnemyElement(enemy) {
 
     const enemyBody = document.createElement('div');
     enemyBody.classList.add('enemy_body');
+    enemyBody.style.backgroundColor = randomEnemyType;
 
     enemyView.appendChild(enemyHUD);
     enemyHUD.appendChild(enemyNameHUD);
@@ -69,12 +70,14 @@ function createEnemyElement(enemy) {
 function enemyGenerator() {
     const enemyNameList = ['Dark', 'Metro', 'Rise', 'Kingdom Come', 'Radiant'];
     const enemyHealthList = [100, 150, 50];
+    const enemyTypeList = ['#FFCBDD', '#653F3C', '#A61F3D', '#A8817C', '#E7C4FA'];
 
     const randomEnemyName = enemyNameList[Math.floor(Math.random() * enemyNameList.length)];
     const randomEnemyHealth = enemyHealthList[Math.floor(Math.random() * enemyHealthList.length)];
+    const randomEnemyType = enemyTypeList[Math.floor(Math.random() * enemyHealthList.length)];
 
     const enemy = new Enemy(randomEnemyName, randomEnemyHealth);
-    enemyFrame.appendChild(createEnemyElement(enemy));
+    enemyFrame.appendChild(createEnemyElement(enemy, randomEnemyType));
 }
 
 while (buffEnemy < maxEnemy) {
