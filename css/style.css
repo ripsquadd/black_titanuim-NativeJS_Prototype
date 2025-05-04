@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "Build";
+    src: url("../assets/font_assets/tf2build.ttf");
+}
+
+@font-face {
+    font-family: "Secondary";
+    src: url("../assets/font_assets/tf2secondary.ttf");
+}
+
+@font-face {
+    font-family: "Linebeam";
+    src: url("../assets/font_assets/linebeam.ttf");
+}
+
+@font-face {
+    font-family: "MTSWide-Bold";
+    src: url("../assets/font_assets/MTSWide-Bold.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Build", serif;
+
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none; /* Стандартный синтаксис */
+}
+
+body {
+    background-color: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.enemy_frame {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5vh;
+    row-gap: 1vh;
+    min-height: 50vh;
+    min-width: 70vw;
+    padding: 1.098vw;
+    margin: 0.732vw;
+}
+
+.enemy_view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.enemy_body {
+    height: 20vh;
+    width: 10vw;
+    background-color: #FFCBDD;
+}
+
+.enemy_hud {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.enemy_hud > p {
+    font-size: 3.663vh;
+}
+
+.enemy_name {
+    color: #B2B2B2;
+}
+
+.enemy_health {
+    color: #FAFAFA;
+}
+
+.player_hud {
+    background-color: #313131;
+    border-radius: 1.098vw;
+    padding: 1.098vw;
+    margin: 1.83vw;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.464vw;
+}
+
+.player_hud > div {
+    border-radius: 1.098vw;
+    background-color: #1E1E1E;
+    padding: 1.098vw;
+
+    display: grid;
+    grid-template-rows: repeat(2, 0.5fr);
+    justify-items: center;
+}
+
+.player_hud > div > p:first-child {
+    font-size: 5.495vh;
+}
+
+.player_hud > div > p:last-child {
+    font-size: 10.989vh;
+}

@@ -1,0 +1,22 @@
+Markup for rendering in DOM
+
+1. Enemy:
+    <div class="enemy_view">
+        <div class="enemy_hud">
+            <p class="enemy_name"></p>
+            <p class="enemy_health"></p>
+        </div>
+        <div class="enemy_body"></div>
+    </div>
+
+2. HUD:
+    <div class="player_hud">
+        <div class="ammo_frame">
+            <p>AMMO</p>
+            <p class="ammo_counter">100</p>
+        </div>
+        <div class="health_frame">
+            <p>HEALTH</p>
+            <p class="health_counter">100</p>
+        </div>
+    </div>
